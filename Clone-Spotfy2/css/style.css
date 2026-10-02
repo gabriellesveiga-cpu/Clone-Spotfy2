@@ -1,0 +1,1035 @@
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #000;
+    color: white;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+
+    overflow: hidden;
+}
+
+
+/* ========================================
+   CONTAINER PRINCIPAL
+======================================== */
+
+.container {
+    width: 100%;
+    height: 100vh;
+
+    display: grid;
+
+    grid-template-rows: 75px 1fr;
+
+    background: #000;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+header {
+    width: 100%;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 0 25px;
+
+    background: #000;
+
+    border-bottom: 1px solid #222;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+/* LOGO */
+
+.logo2 {
+    width: 115px;
+    height: auto;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+}
+
+
+/* BOTÃO INÍCIO */
+
+.inicio {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #242424;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.inicio:hover {
+    background: #333;
+
+    transform: scale(1.06);
+}
+
+
+/* ========================================
+   PESQUISA DO HEADER
+======================================== */
+
+header .pesquisar {
+    width: 420px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+
+    background: #242424;
+
+    border-radius: 25px;
+
+    overflow: visible;
+
+    transition: 0.2s;
+
+    position: relative;
+}
+
+header .pesquisar:focus-within {
+    outline: 2px solid #555;
+}
+
+
+header input.buscar {
+    flex: 1;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 0 20px;
+
+    background: transparent;
+
+    border: none;
+    outline: none;
+
+    color: white;
+
+    font-size: 14px;
+}
+
+header input.buscar::placeholder {
+    color: #a7a7a7;
+}
+
+
+header button.buscar {
+    height: 100%;
+
+    padding: 0 20px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #b3b3b3;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+header button.buscar:hover {
+    color: white;
+}
+
+
+/* ========================================
+   USUÁRIO
+======================================== */
+
+.user {
+    width: 42px;
+    height: 42px;
+
+    margin-left: auto;
+
+    border: 2px solid #242424;
+
+    border-radius: 50%;
+
+    background: #333;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    flex-shrink: 0;
+}
+
+.user:hover {
+    transform: scale(1.06);
+
+    border-color: #555;
+}
+
+/* ========================================
+   ÁREA PRINCIPAL
+======================================== */
+
+main {
+    width: 100%;
+    height: calc(100vh - 75px);
+
+    display: grid;
+
+    grid-template-columns: 280px minmax(0, 1fr) 320px;
+
+    gap: 8px;
+
+    padding: 0;
+
+    background: #000;
+
+    min-height: 0;
+}
+
+
+/* ========================================
+   PAINÉIS
+======================================== */
+
+.div1,
+.div2,
+.div3 {
+    height: 100%;
+
+    background: #121212;
+
+    border-radius: 9px;
+
+    overflow: hidden;
+
+    min-width: 0;
+}
+
+
+/* ========================================
+   BIBLIOTECA
+======================================== */
+
+.div1 {
+    padding: 22px 18px;
+
+    overflow-y: auto;
+}
+
+.div1::-webkit-scrollbar,
+.div2::-webkit-scrollbar {
+    width: 7px;
+}
+
+.div1::-webkit-scrollbar-thumb,
+.div2::-webkit-scrollbar-thumb {
+    background: #444;
+
+    border-radius: 10px;
+}
+
+
+/* ========================================
+   CABEÇALHO DA BIBLIOTECA
+======================================== */
+
+.Biblioteca {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 22px;
+}
+
+.Biblioteca h3 {
+    font-size: 16px;
+
+    color: #fff;
+}
+
+
+/* ========================================
+   BOTÃO CRIAR
+======================================== */
+
+.criar {
+    padding: 8px 14px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    background: #242424;
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.criar:hover {
+    background: #333;
+
+    transform: scale(1.04);
+}
+
+
+/* ========================================
+   FILTROS
+======================================== */
+
+#filtro,
+#flitro {
+    display: flex;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 20px;
+}
+
+#filtro button,
+#flitro button {
+    padding: 8px 14px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    background: #242424;
+
+    color: #fff;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+#filtro button:hover,
+#flitro button:hover {
+    background: #333;
+
+    transform: translateY(-1px);
+}
+
+#filtro button:active,
+#flitro button:active {
+    background: #1ed760;
+
+    color: #000;
+}
+
+
+/* ========================================
+   PESQUISA DA BIBLIOTECA
+======================================== */
+
+.div1 > .pesquisar {
+    width: 100%;
+
+    display: flex;
+
+    margin: 15px 0 20px;
+}
+
+.div1 input.buscar {
+    width: 100%;
+
+    height: 38px;
+
+    padding: 0 15px;
+
+    background: #242424;
+
+    border: none;
+
+    border-radius: 20px;
+
+    outline: none;
+
+    color: white;
+
+    font-size: 12px;
+}
+
+.div1 input.buscar::placeholder {
+    color: #888;
+}
+
+.div1 button.buscar {
+    display: none;
+}
+
+/* ========================================
+   PLAYLISTS DA BIBLIOTECA
+======================================== */
+
+.userPlaylist {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 10px;
+
+    margin-bottom: 6px;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.userPlaylist:hover {
+    background: #242424;
+}
+
+.userPlaylist img {
+    width: 48px;
+    height: 48px;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+
+    flex-shrink: 0;
+}
+
+.userPlaylist h4 {
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: white;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+.userPlaylist p {
+    margin-top: 3px;
+
+    font-size: 11px;
+
+    color: #a7a7a7;
+}
+
+
+/* ========================================
+   ÁREA CENTRAL
+======================================== */
+
+.div2 {
+    padding: 25px;
+
+    overflow-y: auto;
+}
+
+
+/* ========================================
+   TÍTULOS
+======================================== */
+
+.div2 h1,
+.div2 h2 {
+    color: white;
+
+    margin-bottom: 20px;
+}
+
+.div2 h1 {
+    font-size: 28px;
+
+    font-weight: 800;
+}
+
+.div2 h2 {
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+
+/* ========================================
+   CARDS
+======================================== */
+
+.cards {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(150px, 1fr)
+    );
+
+    gap: 18px;
+
+    margin-bottom: 35px;
+}
+
+
+/* CARD INDIVIDUAL */
+
+.card {
+    min-width: 0;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.card:hover {
+    background: #181818;
+
+    transform: translateY(-3px);
+}
+
+
+/* IMAGEM DO CARD */
+
+.card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border-radius: 6px;
+
+    display: block;
+
+    margin-bottom: 12px;
+}
+
+
+/* NOME DA MÚSICA */
+
+.card h3 {
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    margin-bottom: 5px;
+}
+
+
+/* ARTISTA */
+
+.card p {
+    color: #a7a7a7;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* ========================================
+   PAINEL DIREITO
+======================================== */
+
+.div3 {
+    padding: 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow-y: auto;
+}
+
+
+/* ========================================
+   PLAYER
+======================================== */
+
+.player {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+/* IMAGEM DA MÚSICA */
+
+.player img {
+    width: 100%;
+
+    max-width: 280px;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    display: block;
+}
+
+
+/* ========================================
+   INFORMAÇÕES DA MÚSICA
+======================================== */
+
+.infos-msc {
+    width: 100%;
+
+    text-align: center;
+}
+
+.infos-msc h2 {
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    margin-bottom: 6px;
+}
+
+.infos-msc p {
+    color: #a7a7a7;
+
+    font-size: 13px;
+}
+
+
+/* ========================================
+   CONTROLES
+======================================== */
+
+.controle {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+.controle button {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.controle button:hover {
+    background: #282828;
+
+    transform: scale(1.08);
+}
+
+
+/* BOTÃO PLAY */
+
+.controle .bnt-play {
+    width: 48px;
+    height: 48px;
+
+    background: white;
+
+    color: black;
+}
+
+.controle .bnt-play:hover {
+    background: #e5e5e5;
+
+    transform: scale(1.08);
+}
+
+
+/* ========================================
+   PROGRESSO
+======================================== */
+
+.progresso {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.progresso span {
+    min-width: 30px;
+
+    color: #a7a7a7;
+
+    font-size: 10px;
+}
+
+#barraProgresso {
+    flex: 1;
+
+    height: 4px;
+
+    appearance: none;
+
+    border-radius: 5px;
+
+    background: #4d4d4d;
+
+    cursor: pointer;
+}
+
+#barraProgresso::-webkit-slider-thumb {
+    appearance: none;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    opacity: 0;
+
+    transition: 0.2s;
+}
+
+#barraProgresso:hover::-webkit-slider-thumb {
+    opacity: 1;
+}
+
+
+/* ========================================
+   ÁUDIO
+======================================== */
+
+audio {
+    display: none;
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.75);
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 99999;
+}
+
+.modal-overlay.aberto {
+    display: flex;
+}
+
+.modal-playlist {
+    width: 400px;
+
+    background: #181818;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    color: white;
+
+    position: relative;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+.modal-playlist h2 {
+    margin-bottom: 10px;
+}
+
+.modal-playlist p {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+#nomePlaylist {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 6px;
+
+    background: #2a2a2a;
+
+    color: white;
+
+    font-size: 15px;
+
+    margin-bottom: 15px;
+}
+
+.btn-salvar-playlist {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background: #1db954;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.fechar-modal {
+    position: absolute;
+
+    top: 10px;
+    right: 15px;
+
+    border: none;
+
+    background: none;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* ========================================
+   MUSICAS PARA OUVIR
+======================================== */
+
+.recomendacoes-artistas {
+    width: 100%;
+    padding: 20px 25px 10px 25px;
+}
+
+.titulo-recomendacoes h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.titulo-recomendacoes p {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+
+/* LISTA */
+
+.lista-recomendacoes {
+    display: flex;
+    gap: 18px;
+
+    overflow-x: auto;
+
+    padding-bottom: 10px;
+}
+
+
+/* CARD */
+
+.card-recomendacao {
+    min-width: 160px;
+    width: 160px;
+
+    padding: 12px;
+
+    background: #181818;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.card-recomendacao:hover {
+    background: #282828;
+    transform: translateY(-3px);
+}
+
+
+/* CAPA */
+
+.card-recomendacao img {
+    width: 136px;
+    height: 136px;
+
+    object-fit: cover;
+
+    border-radius: 6px;
+
+    display: block;
+
+    margin-bottom: 10px;
+}
+
+
+/* NOME */
+
+.card-recomendacao .nome-musica {
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* ARTISTA */
+
+.card-recomendacao .nome-artista {
+    color: #aaa;
+
+    font-size: 12px;
+
+    margin-top: 5px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* BARRA DE ROLAGEM */
+
+.lista-recomendacoes::-webkit-scrollbar {
+    height: 6px;
+}
+
+.lista-recomendacoes::-webkit-scrollbar-thumb {
+    background: #555;
+
+    border-radius: 10px;
+}

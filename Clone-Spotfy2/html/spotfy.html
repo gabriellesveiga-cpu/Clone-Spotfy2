@@ -1,0 +1,441 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotfy</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="../logo.png" alt="" class="logo2">
+        <button id="inicio" class="inicio">início</button>
+        <div id="pesquisar" class="pesquisar">
+            <input type="text" id="busca" class="buscar" placeholder="Pesquise seu artista">
+            <button id="buscar" class="buscar" onclick="buscar">Pesquisar</button>
+        </div>
+        <button id="user" class="user"></button>
+    </header>
+
+    <main>
+        <div id="div1" class="div1">
+            <div id="Biblioteca" class="Biblioteca">
+                <h3>Sua Biblioteca</h3>
+                <button id="criar" class="criar">+Criar</button>
+            </div>
+
+            <div id="filtro">
+                <button>Playlists</button>
+                <button>Artistas</button>
+                <button>Álbuns</button>
+            </div>
+
+        <div id="pesquisar" class="pesquisar">
+            <input type="text" id="busca" class="buscar" placeholder="Pesquise seu artista">
+            <button id="buscar" class="buscar" onclick="buscar">Pesquisar</button>
+        </div>
+
+        <div id="userPlaylist" class="userPlaylist">
+
+        </div>
+        </div>
+
+        <div id="div2" class="div2">
+            <div id="flitro">
+                <button>Todo</button>
+                <button>Músicas</button>
+            </div>
+
+            <div id="recomendacoesArtistas" class="recomendacoes-artistas">
+
+    <div class="titulo-recomendacoes">
+        <h2>Feito para você</h2>
+        <p>Baseado nos artistas que você escolheu</p>
+    </div>
+
+    <div id="listaRecomendacoes" class="lista-recomendacoes">
+        <!-- músicas serão colocadas pelo JS -->
+    </div>
+
+</div>
+
+        <div id="userPlaylist" class="userPlaylist">
+
+        </div>
+
+        <section class="secao">
+            <div class="Recentes">
+                <h3>Suas músicas estão com saudade</h3>
+            </div>
+
+            <div id="musicas" class="cards">
+
+            </div>
+        </section>
+        </div>
+
+        <div id="div3" class="div3">
+            <div id="ouvindo">
+                <h3>Ouvindo</h3>
+
+                <footer class="player">
+                    <div class="infos-msc">
+                        <img src="" alt="Capa" id="capaMusica">
+
+                        <div class="dados">
+                            <h3 id="nomeMusica">
+
+                            </h3>
+
+                            <p id="artista">
+
+                            </p>
+
+                            <span id="playlists"></span>
+                        </div>
+                    </div>
+
+                    <div class="controle">
+                        <button id="aletorio" title="Aleatório">
+
+                        </button>
+
+                        <button id="anterior" title="Anterior">
+
+                        </button>
+
+                        <button id="play" class="bnt-play" title="Reproduzir">
+
+                        </button>
+
+                        <button id="proxima" title="Próxima">
+
+                        </button>
+
+                        <button id="repetir" title="Repetir">
+
+                        </button>
+                    </div>
+
+                    <div class="progresso">
+                        <span id="tempoAtual">
+                            0:00
+                        </span>
+
+                        <input type="range" id="barraProgresso" min="0" max="100" value="0">
+
+                        <span id="duracao">
+                            0:00
+                        </span>
+                    </div>
+
+                    <audio id="audio"></audio>
+                </footer>
+            </div>
+        </div>
+    </main>
+<script type="module" src="main.js"></script>
+</body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotfy</title>
+    <link rel="stylesheet" href="">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="./logo_Spotify2.webp" alt="" class="logo2">
+        <button id="inicio" class="inicio">início</button>
+        <div id="pesquisar" class="pesquisar">
+            <input type="text" id="busca" class="buscar" placeholder="Pesquise seu artista">
+            <button id="buscar" class="buscar" onclick="buscar">Pesquisar</button>
+        </div>
+        <button id="user" class="user"></button>
+    </header>
+
+    <main>
+        <div id="div1" class="div1">
+            <div id="Biblioteca" class="Biblioteca">
+                <h3>Sua Biblioteca</h3>
+                <button id="btnCriarPlaylist" class="btn-criar">+ Criar</button>
+                <div id="suasPlaylists"></div>
+            </div>
+
+            <!-- ==========================================
+                SUAS PLAYLISTS
+            ========================================== -->
+
+            <section class="area-playlists">
+
+                <div class="titulo-playlists">
+                    <h2>Suas playlists</h2>
+
+                    <button id="btnCriarPlaylist" class="btn-criar">
+                        + Criar
+                    </button>
+                </div>
+
+                <div id="listaPlaylists" class="lista-playlists">
+                    <!-- As playlists aparecerão aqui -->
+                </div>
+
+            </section>
+
+
+            <!-- ==========================================
+                MODAL CRIAR PLAYLIST
+            ========================================== -->
+
+            <div id="modalCriarPlaylist" class="modal-overlay">
+
+                <div class="modal-playlist">
+
+                    <button id="fecharModal" class="fechar-modal">
+                        ×
+                    </button>
+
+                    <h2>Criar playlist</h2>
+
+                    <p>Escolha um nome para sua playlist</p>
+
+                    <input
+                        type="text"
+                        id="nomePlaylist"
+                        placeholder="Nome da playlist"
+                        maxlength="50"
+                    >
+
+                    <button id="salvarPlaylist" class="btn-salvar-playlist">
+                        Salvar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==========================================
+                MODAL DA PLAYLIST
+            ========================================== -->
+
+            <div id="modalPlaylist" class="modal-overlay">
+
+                <div class="modal-playlist playlist-aberta">
+
+                    <button id="fecharPlaylist" class="fechar-modal">
+                        ×
+                    </button>
+
+                    <div id="conteudoPlaylist">
+                        <!-- Conteúdo colocado pelo JavaScript -->
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div id="filtro">
+                <button>Playlists</button>
+                <button>Artistas</button>
+                <button>Álbuns</button>
+            </div>
+
+        <div id="pesquisar" class="pesquisar">
+            <input type="text" id="busca" class="buscar" placeholder="Pesquise seu artista">
+            <button id="buscar" class="buscar" onclick="buscar">Pesquisar</button>
+        </div>
+
+        <div id="userPlaylist" class="userPlaylist">
+
+        </div>
+        </div>
+
+        <div id="div2" class="div2">
+            <div id="flitro">
+                <button>Todo</button>
+                <button>Músicas</button>
+            </div>
+
+        <div id="userPlaylist" class="userPlaylist">
+
+        </div>
+
+        <section class="secao">
+            <div class="Recentes">
+                <h3>Suas músicas estão com saudade</h3>
+            </div>
+
+            <div id="musicas" class="cards">
+
+            </div>
+        </section>
+        </div>
+
+        <div id="div3" class="div3">
+            <div id="ouvindo">
+                <h3>Ouvindo</h3>
+
+                <footer class="player">
+                    <div class="infos-msc">
+                        <img src="" alt="Capa" id="capaMusica">
+
+                        <div class="dados">
+                            <h3 id="nomeMusica">
+
+                            </h3>
+
+                            <p id="artista">
+
+                            </p>
+
+                            <span id="playlists"></span>
+                        </div>
+                    </div>
+
+                    <div class="controle">
+                        <button id="aletorio" title="Aleatório">
+
+                        </button>
+
+                        <button id="anterior" title="Anterior">
+
+                        </button>
+
+                        <button id="play" class="bnt-play" title="Reproduzir">
+
+                        </button>
+
+                        <button id="proxima" title="Próxima">
+
+                        </button>
+
+                        <button id="repetir" title="Repetir">
+
+                        </button>
+                    </div>
+
+                    <div class="progresso">
+                        <span id="tempoAtual">
+                            0:00
+                        </span>
+
+                        <input type="range" id="barraProgresso" min="0" max="100" value="0">
+
+                        <span id="duracao">
+                            0:00
+                        </span>
+                    </div>
+
+                    <audio id="audio"></audio>
+                </footer>
+            </div>
+        </div>
+    </main>
+
+    <div id="modalCriarPlaylist" class="modal-overlay">
+
+    <div class="modal-playlist">
+
+        <button id="fecharModal" class="fechar-modal">
+            ×
+        </button>
+
+        <h2>Criar playlist</h2>
+
+        <p>Escolha um nome para sua playlist</p>
+
+        <input
+            type="text"
+            id="nomePlaylist"
+            placeholder="Nome da playlist"
+        >
+
+        <button id="salvarPlaylist" class="btn-salvar-playlist">
+            Salvar
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+const btnCriar = document.getElementById("btnCriarPlaylist");
+const modal = document.getElementById("modalCriarPlaylist");
+const fechar = document.getElementById("fecharModal");
+const salvar = document.getElementById("salvarPlaylist");
+const nome = document.getElementById("nomePlaylist");
+
+
+// ABRIR
+
+btnCriar.addEventListener("click", function() {
+
+    modal.classList.add("aberto");
+
+    nome.value = "";
+
+    nome.focus();
+
+});
+
+
+// FECHAR
+
+fechar.addEventListener("click", function() {
+
+    modal.classList.remove("aberto");
+
+});
+
+
+// SALVAR
+
+salvar.addEventListener("click", function() {
+
+    const nomePlaylist = nome.value.trim();
+
+    if (nomePlaylist === "") {
+
+        alert("Digite o nome da playlist!");
+
+        return;
+    }
+
+    console.log("Playlist criada:", nomePlaylist);
+
+    modal.classList.remove("aberto");
+
+});
+
+
+// ENTER
+
+nome.addEventListener("keydown", function(event) {
+
+    if (event.key === "Enter") {
+
+        salvar.click();
+
+    }
+
+});
+
+</script>
+<script type="module" src="../js/site.js"></script>
+</body>
+
+</html>
